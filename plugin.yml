@@ -1,0 +1,26 @@
+name: MStaffalert
+main: MStaffalert\Main
+version: 1.0.0
+api: 1.12.0
+load: POSTWORLD
+authors: dreamcrafters,jamieyzx
+website: https://github.com/dreamcrafters/
+
+commands:
+  MStaffalert :
+    description: "MStaffalert main command"
+    usage: "/MStaffalert <message on op entry>"
+    permission: "MStaffalert.command.MStaffalert"
+
+permissions:
+  MStaffalert :
+    default: op
+    description: "Allows ops to use the MStafalert command"
+    children:
+      alias.command:
+        default: op
+        description: "Allows ops to use the MStaffalert."
+        children:
+          alias.command.alias:
+            default: op
+            description: "Allows changing of the join message"
